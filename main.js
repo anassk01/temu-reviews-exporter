@@ -2,12 +2,6 @@ class ReviewExtractor {
     constructor() {
         this.extractedInfo = [];
         this.reviews = document.querySelectorAll('#reviewContent > div._3mn9Y0tf > div._2OaJDN8Y._3Rsl6Owq._1xAk_zzX > div._10EiyDKr._3hjIP4Y2._2gC1sYKf.HVCrPqZh > div > div > div > div:nth-child(3) > div > div > div');
-        this.observer = new MutationObserver(() => this.extractReviewInfo());
-        this.observeReviews();
-    }
-
-    observeReviews() {
-        this.observer.observe(document.querySelector('#reviewContent'), { childList: true, subtree: true });
     }
 
     extractReviewInfo() {
@@ -47,6 +41,7 @@ class ReviewExtractor {
     }
 
     convertJsonToCsv() {
+        this.extractReviewInfo(); // Extract review info before converting to CSV
         const csvContent = "data:text/csv;charset=utf-8," 
             + "Author Name,Author Image,Country Image,Review Date,Stars,Images,Body Text\n"
             + this.extractedInfo.map(item => {
@@ -66,6 +61,7 @@ class ReviewExtractor {
     }
 
     convertJsonToJsonString() {
+        this.extractReviewInfo(); // Extract review info before converting to JSON
         return JSON.stringify(this.extractedInfo);
     }
 
@@ -84,7 +80,7 @@ class ReviewExtractor {
 // Create an instance of ReviewExtractor
 const reviewExtractor = new ReviewExtractor();
 
-// Dynamically create buttons and add them to the DOM
+// Dynamically create buttons and add them to the DOM after the target element
 const csvButton = document.createElement('button');
 csvButton.textContent = 'Download CSV';
 csvButton.addEventListener('click', () => reviewExtractor.downloadCsv());
