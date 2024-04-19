@@ -23,22 +23,22 @@ Output: Returns a CSV-formatted string that can be downloaded as a file.
 - downloadCsv() Method
 Description: Initiates the download of review information in CSV format.
 Functionality:
-- - Calls extractReviewInfo() to populate extractedInfo.
-- - Converts review information to CSV using convertJsonToCsv().
-- - Creates a downloadable link for the CSV file.
+- Calls extractReviewInfo() to populate extractedInfo.
+- Converts review information to CSV using convertJsonToCsv().
+- Creates a downloadable link for the CSV file.
 
 
 # convertJsonToJsonString() Method
 
 Description: 
-- - Converts the extracted review information into a JSON string.
-- - Output: Returns a JSON-formatted string containing the review information.
-- - downloadJson() Method
+- Converts the extracted review information into a JSON string.
+- Output: Returns a JSON-formatted string containing the review information.
+- downloadJson() Method
 Description: Initiates the download of review information in JSON format.
 Functionality:
-- - Calls extractReviewInfo() to populate extractedInfo.
-- - Converts review information to JSON using convertJsonToJsonString().
-- - Creates a downloadable link for the JSON file.
+- Calls extractReviewInfo() to populate extractedInfo.
+- Converts review information to JSON using convertJsonToJsonString().
+- Creates a downloadable link for the JSON file.
   
 Additional Features
 
