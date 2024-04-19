@@ -16,7 +16,7 @@ Data Extracted:
 - Body Text
 
 
-##- convertJsonToCsv() Method
+# - convertJsonToCsv() Method
 
 Description: Converts the extracted review information into a CSV format.
 Output: Returns a CSV-formatted string that can be downloaded as a file.
