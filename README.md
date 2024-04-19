@@ -16,7 +16,7 @@ Data Extracted:
 - Body Text
 
 
-# - convertJsonToCsv() Method
+#  convertJsonToCsv() Method
 
 Description: Converts the extracted review information into a CSV format.
 Output: Returns a CSV-formatted string that can be downloaded as a file.
@@ -28,7 +28,7 @@ Functionality:
 - - Creates a downloadable link for the CSV file.
 
 
-- convertJsonToJsonString() Method
+# convertJsonToJsonString() Method
 
 Description: 
 - - Converts the extracted review information into a JSON string.
